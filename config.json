@@ -5,12 +5,47 @@
       "username": "Pedro-Messi",
       "profile_url": "https://polymarket.com/profile/@Pedro-Messi",
       "wallet_address": "0xdd9ed02bb67b2ec504be24b98febd651fdac49b3"
+    },
+    {
+      "username": "kch123",
+      "profile_url": "https://polymarket.com/@kch123",
+      "wallet_address": "0x6a72f61820b26b1fe4d956e17b6dc2a1ea3033ee"
+    },
+    {
+      "username": "xdd07070",
+      "profile_url": "https://polymarket.com/@xdd07070",
+      "wallet_address": "0x25e28169faea17421fcd4cc361f6436d1e449a09"
+    },
+    {
+      "username": "The Spirit of Ukraine>UMA",
+      "profile_url": "https://polymarket.com/@The%20Spirit%20of%20Ukraine%3EUMA",
+      "wallet_address": "0x0c0e270cf879583d6a0142fc817e05b768d0434e"
+    },
+    {
+      "username": "Sharky6999",
+      "profile_url": "https://polymarket.com/@Sharky6999",
+      "wallet_address": "0x751a2b86cab503496efd325c8344e10159349ea1"
+    },
+    {
+      "username": "Sonix",
+      "profile_url": "https://polymarket.com/@Sonix",
+      "wallet_address": "0x7a0da16a1205ee51a56fa862e8baa61e350eff14"
+    },
+    {
+      "username": "Poory",
+      "profile_url": "https://polymarket.com/@Poory",
+      "wallet_address": "0x825784480f002247beaf01ed1777a85436ceda02"
+    },
+    {
+      "username": "oneheadedtiger",
+      "profile_url": "https://polymarket.com/@oneheadedtiger",
+      "wallet_address": "0xfdc0bd67fbd71aa8edd00121eb2a7fcbddc34b85"
     }
   ],
   "notifications": {
     "on_new_position": true,
     "on_position_increase": true,
-    "on_position_closed": false
+    "on_position_closed": true
   },
   "first_run_suppress_notifications": true,
   "authorized_chat_ids": []
