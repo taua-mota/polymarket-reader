@@ -1,0 +1,17 @@
+{
+  "polling_interval_seconds": 30,
+  "monitored_users": [
+    {
+      "username": "Pedro-Messi",
+      "profile_url": "https://polymarket.com/profile/@Pedro-Messi",
+      "wallet_address": "0xdd9ed02bb67b2ec504be24b98febd651fdac49b3"
+    }
+  ],
+  "notifications": {
+    "on_new_position": true,
+    "on_position_increase": true,
+    "on_position_closed": false
+  },
+  "first_run_suppress_notifications": true,
+  "authorized_chat_ids": []
+}
