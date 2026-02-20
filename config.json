@@ -1,5 +1,5 @@
 {
-  "polling_interval_seconds": 30,
+  "polling_interval_seconds": 300,
   "monitored_users": [
     {
       "username": "Pedro-Messi",
