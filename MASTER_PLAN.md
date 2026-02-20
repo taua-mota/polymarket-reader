@@ -14,8 +14,12 @@
 6. [Data Models](#6-data-models)
 7. [Telegram Message Format](#7-telegram-message-format)
 8. [Error Handling & Resilience](#8-error-handling--resilience)
-9. [Deployment](#9-deployment)
-10. [Future Enhancements](#10-future-enhancements)
+9. [Testing & Quality Assurance](#9-testing--quality-assurance)
+10. [Change Management Process](#10-change-management-process)
+11. [Test Coverage Matrix](#11-test-coverage-matrix)
+12. [Release Checklist](#12-release-checklist)
+13. [Deployment](#13-deployment)
+14. [Future Enhancements](#14-future-enhancements)
 
 ---
 
@@ -340,7 +344,66 @@ Value: $1,399.89
 
 ---
 
-## 9. Deployment
+## 9. Testing & Quality Assurance
+
+### Principles
+
+- **Every agent modification must be accompanied by new or updated tests.**
+- All tests must pass before merging or deploying changes.
+- Test coverage is tracked per agent (see Test Coverage Matrix).
+
+### Running Tests
+
+```powershell
+Invoke-Build Test
+# or
+pytest
+```
+
+### Test Types
+
+- **Unit tests:** Validate individual agent logic in isolation.
+- **Integration tests:** Validate agent interactions and end-to-end flows.
+
+---
+
+## 10. Change Management Process
+
+1. **Modify agent/component code.**
+2. **Create or update tests** for the affected agent (see AGENTS.md for mapping).
+3. **Run all tests** and ensure they pass.
+4. **Update MASTER_PLAN.md** to reflect the change (including this process section).
+5. **Update AGENTS.md** if agent responsibilities or interfaces change.
+6. **Commit and document** the change.
+
+---
+
+## 11. Test Coverage Matrix
+
+| Agent/Component          | Test File(s)                                  |
+| ------------------------ | --------------------------------------------- |
+| Profile Resolver         | tests/test_profile_resolver.py                |
+| Position Poller          | (To be added) tests/test_position_poller.py   |
+| Change Detector          | tests/test_change_detector.py                 |
+| Telegram Notifier        | tests/test_telegram_notifier.py               |
+| State Manager            | (To be added) tests/test_state_manager.py     |
+| Telegram Command Handler | (To be added) tests/test_telegram_commands.py |
+| Scheduler/Orchestrator   | (To be added) tests/test_scheduler.py         |
+
+---
+
+## 12. Release Checklist
+
+- [ ] All code changes are covered by tests
+- [ ] All tests pass (CI and local)
+- [ ] MASTER_PLAN.md and AGENTS.md are up to date
+- [ ] Version bump (if applicable)
+- [ ] Deployment instructions verified
+- [ ] Changelog updated (if maintained)
+
+---
+
+## 13. Deployment
 
 ### Local Development
 
@@ -367,7 +430,7 @@ docker compose logs -f
 
 ---
 
-## 10. Future Enhancements
+## 14. Future Enhancements
 
 | Feature                       | Description                                                                 | Priority |
 | ----------------------------- | --------------------------------------------------------------------------- | -------- |

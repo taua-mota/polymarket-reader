@@ -1,5 +1,8 @@
 # Agents — Polymarket Position Monitor Bot
 
+> **Change Protocol:**
+> Any modification to an agent must be accompanied by new or updated tests, and the MASTER_PLAN must be updated to reflect the change. See the "Test Coverage" section for each agent.
+
 This document defines the agents (components/modules) that compose the Polymarket Position Monitor system. Each agent has a single responsibility and communicates through well-defined interfaces.
 
 ---
@@ -19,6 +22,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 
 **API Used:** `https://gamma-api.polymarket.com/public-search`
 
+**Test Coverage:**
+
+- [tests/test_profile_resolver.py](tests/test_profile_resolver.py)
+
+**Future Improvements:**
+
+- Support for additional fallback methods if Gamma API changes
+
 ---
 
 ## 2. Position Poller Agent
@@ -35,6 +46,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 **Outputs:** Raw position data per user (array of position objects)
 
 **API Used:** `https://data-api.polymarket.com/positions?user={address}`
+
+**Test Coverage:**
+
+- (To be added: tests/test_position_poller.py)
+
+**Future Improvements:**
+
+- Add support for paginated results if needed
 
 ---
 
@@ -55,7 +74,13 @@ This document defines the agents (components/modules) that compose the Polymarke
 **Inputs:** Current positions (from Poller) + stored state  
 **Outputs:** List of change events (`new_position`, `position_increased`, `position_closed`)
 
----
+**Test Coverage:**
+
+- [tests/test_change_detector.py](tests/test_change_detector.py)
+
+**Future Improvements:**
+
+- Configurable thresholds for position change detection
 
 ## 4. Telegram Notifier Agent
 
@@ -79,6 +104,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 
 **API Used:** `https://api.telegram.org/bot<TOKEN>/sendMessage`
 
+**Test Coverage:**
+
+- [tests/test_telegram_notifier.py](tests/test_telegram_notifier.py)
+
+**Future Improvements:**
+
+- Add support for Telegram inline keyboards and rich media
+
 ---
 
 ## 5. State Manager Agent
@@ -96,6 +129,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 
 **Inputs:** Wallet address + position data  
 **Outputs:** Stored/retrieved state
+
+**Test Coverage:**
+
+- (To be added: tests/test_state_manager.py)
+
+**Future Improvements:**
+
+- Add migration support for state schema changes
 
 ---
 
@@ -120,6 +161,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 
 **API Used:** `https://api.telegram.org/bot<TOKEN>/getUpdates` (or webhook)
 
+**Test Coverage:**
+
+- (To be added: tests/test_telegram_commands.py)
+
+**Future Improvements:**
+
+- Add command usage analytics and error feedback
+
 ---
 
 ## 7. Scheduler / Orchestrator Agent
@@ -142,6 +191,14 @@ This document defines the agents (components/modules) that compose the Polymarke
 
 **Inputs:** Config file (users to monitor, polling interval, Telegram settings)  
 **Outputs:** Orchestrated pipeline execution
+
+**Test Coverage:**
+
+- (To be added: tests/test_scheduler.py)
+
+**Future Improvements:**
+
+- Add metrics export and health check endpoints
 
 ---
 
