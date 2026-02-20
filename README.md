@@ -76,13 +76,13 @@ TELEGRAM_CHAT_ID=-1001234567890
 }
 ```
 
-| Field | Description |
-|---|---|
-| `wallet_address` | Optional. Skip API resolution if you already know it. Leave blank to auto-resolve from the username. |
-| `on_new_position` | Alert when a brand-new position appears. |
-| `on_position_increase` | Alert when shares on an existing position grow by more than 0.5. |
-| `on_position_closed` | Alert when a position disappears entirely. |
-| `first_run_suppress_notifications` | Silently baseline all existing positions on first start. |
+| Field                              | Description                                                                                          |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `wallet_address`                   | Optional. Skip API resolution if you already know it. Leave blank to auto-resolve from the username. |
+| `on_new_position`                  | Alert when a brand-new position appears.                                                             |
+| `on_position_increase`             | Alert when shares on an existing position grow by more than 0.5.                                     |
+| `on_position_closed`               | Alert when a position disappears entirely.                                                           |
+| `first_run_suppress_notifications` | Silently baseline all existing positions on first start.                                             |
 
 > The bot hot-reloads `config.json` every poll cycle. Add or remove users without restarting.
 
@@ -90,15 +90,15 @@ TELEGRAM_CHAT_ID=-1001234567890
 
 ## Invoke-Build tasks
 
-| Command | What it does |
-|---|---|
-| `Invoke-Build` | Start the bot (default) |
-| `Invoke-Build Run` | Start the bot |
-| `Invoke-Build Test` | Run the test suite (24 tests) |
-| `Invoke-Build TestStrict` | Tests with deprecation warnings as errors |
-| `Invoke-Build Install` | Create venv + install all dependencies |
-| `Invoke-Build Clean` | Remove `state.json`, `__pycache__`, `.pytest_cache` |
-| `Invoke-Build Reset` | Clean + full reinstall |
+| Command                   | What it does                                        |
+| ------------------------- | --------------------------------------------------- |
+| `Invoke-Build`            | Start the bot (default)                             |
+| `Invoke-Build Run`        | Start the bot                                       |
+| `Invoke-Build Test`       | Run the test suite (24 tests)                       |
+| `Invoke-Build TestStrict` | Tests with deprecation warnings as errors           |
+| `Invoke-Build Install`    | Create venv + install all dependencies              |
+| `Invoke-Build Clean`      | Remove `state.json`, `__pycache__`, `.pytest_cache` |
+| `Invoke-Build Reset`      | Clean + full reinstall                              |
 
 ---
 

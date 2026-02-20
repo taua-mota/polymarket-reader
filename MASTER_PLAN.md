@@ -56,12 +56,12 @@ See [AGENTS.md](AGENTS.md) for detailed agent/component descriptions.
 
 ### Key Endpoints
 
-| Endpoint                                    | Description                                  | Rate Limit    |
-| ------------------------------------------- | -------------------------------------------- | ------------- |
-| `GET gamma-api/public-search?q=@username`   | Resolve username to profile + wallet address | 350 req/10s   |
-| `GET data-api/positions?user={address}`     | Current active positions for a wallet        | 150 req/10s   |
-| `GET data-api/activity?user={address}`      | Onchain activity feed for a wallet           | 1,000 req/10s |
-| `GET gamma-api/markets/{id}`                | Market details (question, slug, outcomes)    | 300 req/10s   |
+| Endpoint                                  | Description                                  | Rate Limit    |
+| ----------------------------------------- | -------------------------------------------- | ------------- |
+| `GET gamma-api/public-search?q=@username` | Resolve username to profile + wallet address | 350 req/10s   |
+| `GET data-api/positions?user={address}`   | Current active positions for a wallet        | 150 req/10s   |
+| `GET data-api/activity?user={address}`    | Onchain activity feed for a wallet           | 1,000 req/10s |
+| `GET gamma-api/markets/{id}`              | Market details (question, slug, outcomes)    | 300 req/10s   |
 
 ### Profile → Address Resolution
 
@@ -442,7 +442,7 @@ Edit `config.json` and add an entry to `monitored_users`:
 {
   "username": "SomeTrader",
   "profile_url": "https://polymarket.com/profile/@SomeTrader",
-  "wallet_address": "0x..."   // leave blank to auto-resolve
+  "wallet_address": "0x..." // leave blank to auto-resolve
 }
 ```
 
